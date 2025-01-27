@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liverpool FC Fan Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .header, footer {
+      background-color: #c8102e;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .hero {
+      background: url('stadium.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .cta-button {
+      background-color: #c8102e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .cta-button:hover {
+      background-color: #a10e26;
+    }
+
+    .form input, .form textarea, .form button {
+      width: 80%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form button {
+      background-color: #c8102e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #a10e26;
+    }
+
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-hero {
+      background: url('champions.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .about-hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .register-content {
+      text-align: center;
+    }
+
+    .register-content img {
+      width: 200px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+     <div class="logo">
+    <img src="logo.jpeg" alt="Liverpool Logo">
+  </div>
+    <h1>Liverpool FC Fan Site</h1>
+    <nav>
+      <a data-section="home">Home</a>
+      <a data-section="about">About</a>
+      <a data-section="gallery">Gallery</a>
+      <a data-section="contact">Contact</a>
+      <a data-section="register">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section active">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Liverpool FC Fan Club</h1>
+          <p>Your ultimate destination for everything Liverpool FC! Stay updated on the latest news, match schedules, and fan activities.</p>
+          <a href="#" class="cta-button">Join the Fan Club</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about-hero">
+        <div class="about-hero-content">
+          <h1>About Liverpool FC</h1>
+          <p>Liverpool FC, founded in 1892, is one of the most successful and iconic football clubs in the world. Based in Anfield, Liverpool, the club is renowned for its passionate fanbase and its anthem, <strong>"You’ll Never Walk Alone."</strong></p>
+          <h2>Achievements</h2>
+          <ul>
+            <li>6 UEFA Champions League Titles</li>
+            <li>19 English League Championships</li>
+            <li>8 FA Cups</li>
+            <li>1 FIFA Club World Cup</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h1>Gallery</h1>
+      <div>
+        <img src="celebration.jpg" alt="Anfield Stadium">
+        <img src="shirt.jpg" alt="Anfield Crowd">
+        <img src="flag.jpg" alt="Liverpool Celebration">
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h1>Contact Us</h1>
+      <div class="form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+      </div>
+    </section>
+
+    <section id="register" class="section">
+      <h1>Register</h1>
+      <div class="register-content">
+        <img src="Logo 2.jpeg" alt="Liverpool Logo">
+        <div class="form">
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+          <button>Register</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Liverpool FC Fan Club. You'll Never Walk Alone.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.header nav a').forEach(link => {
+      link.addEventListener('click', function () {
+        const targetSection = this.getAttribute('data-section');
+        document.querySelectorAll('.section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById(targetSection).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
